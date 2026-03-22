@@ -5,7 +5,12 @@
  * custom endpoints, log levels, and structured logging.
  */
 
-import { DCYFRFramework } from '@dcyfr/ai';
+// Minimal application framework stub for demonstration purposes
+class DCYFRFramework {
+  constructor(private config: Record<string, unknown> = {}) {}
+  async initialize(): Promise<void> { void this.config; }
+  async shutdown(): Promise<void> {}
+}
 import { createLogger } from '../src/lib/logger.js';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';

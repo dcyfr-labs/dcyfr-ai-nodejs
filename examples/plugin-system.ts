@@ -5,8 +5,20 @@
  * with the DCYFR AI framework.
  */
 
-import { DCYFRFramework } from '@dcyfr/ai';
-import type { Plugin } from '../src/types/index.js';
+// Plugin interface (defined locally since DCYFRFramework is not exported from @dcyfr/ai)
+interface Plugin {
+  name: string;
+  version: string;
+  initialize(): Promise<void>;
+  shutdown?(): Promise<void>;
+}
+
+// Minimal application framework stub for demonstration purposes
+class DCYFRFramework {
+  constructor(private config: Record<string, unknown> = {}) {}
+  async initialize(): Promise<void> { void this.config; }
+  async shutdown(): Promise<void> {}
+}
 
 /**
  * Example custom plugin: Request Logger

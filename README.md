@@ -80,6 +80,7 @@ npm run dev
 ```
 
 **What you get immediately:**
+
 - ✅ Express server with hot reload
 - ✅ TypeScript strict mode configured
 - ✅ Vitest testing framework ready
@@ -91,15 +92,16 @@ npm run dev
 
 ## 🧭 Related Packages
 
-| Package                                            | Purpose                  | Type        |
-| -------------------------------------------------- | ------------------------ | ----------- |
-| [@dcyfr/ai](../dcyfr-ai)                           | Core AI framework        | npm package |
-| [@dcyfr/ai-cli](../dcyfr-ai-cli)                   | CLI tools                | npm package |
-| [@dcyfr/ai-agents](../dcyfr-ai-agents)             | Autonomous agent template | Template    |
-| [@dcyfr/ai-api](../dcyfr-ai-api)                   | REST API template        | Template    |
-| [dcyfr-labs](../dcyfr-labs)                        | Production Next.js app   | Application |
+| Package                                | Purpose                   | Type        |
+| -------------------------------------- | ------------------------- | ----------- |
+| [@dcyfr/ai](../dcyfr-ai)               | Core AI framework         | npm package |
+| [@dcyfr/ai-cli](../dcyfr-ai-cli)       | CLI tools                 | npm package |
+| [@dcyfr/ai-agents](../dcyfr-ai-agents) | Autonomous agent template | Template    |
+| [@dcyfr/ai-api](../dcyfr-ai-api)       | REST API template         | Template    |
+| [dcyfr-labs](../dcyfr-labs)            | Production Next.js app    | Application |
 
 **See also:**
+
 - [Workspace Documentation](../README.md)
 - [Architecture Guide](../docs/architecture/)
 - [Contributing Guide](../CONTRIBUTING.md)
@@ -230,6 +232,8 @@ graph LR
 
 ## 🎯 Usage Examples
 
+For runnable example scripts and type-check commands, see [`examples/README.md`](examples/README.md).
+
 ### Web Server
 
 Start the Express web server with DCYFR AI integration:
@@ -265,18 +269,18 @@ import { ValidationFramework, TelemetryEngine } from '@dcyfr/ai';
 const telemetry = new TelemetryEngine({
   enabled: true,
   storage: 'file',
-  basePath: '.dcyfr/telemetry'
+  basePath: '.dcyfr/telemetry',
 });
 
 const validation = new ValidationFramework({
   failureMode: 'error',
-  parallel: true
+  parallel: true,
 });
 
 // Use in your application
 const result = await validation.validate({
   projectRoot: process.cwd(),
-  files: ['src/**/*.ts']
+  files: ['src/**/*.ts'],
 });
 
 if (result.valid) {
@@ -292,11 +296,11 @@ import type { Plugin } from './src/types';
 class MyPlugin implements Plugin {
   name = 'my-plugin';
   version = '1.0.0';
-  
+
   async initialize() {
     console.log('Plugin initialized');
   }
-  
+
   async shutdown() {
     console.log('Plugin shutdown');
   }
@@ -310,14 +314,14 @@ import { createLogger } from './src/lib/logger';
 
 const logger = createLogger('app');
 
-logger.info('Application started', { 
+logger.info('Application started', {
   version: '1.0.0',
-  environment: 'production'
+  environment: 'production',
 });
 
 logger.error('Operation failed', {
   error: error.message,
-  stack: error.stack
+  stack: error.stack,
 });
 ```
 
@@ -326,7 +330,7 @@ logger.error('Operation failed', {
 ### DCYFR AI Configuration (`.dcyfr.yaml`)
 
 ```yaml
-version: "1.0"
+version: '1.0'
 project:
   name: my-project
   type: application
@@ -394,6 +398,7 @@ npm start
 ```
 
 The build outputs to the `dist/` directory with:
+
 - Compiled JavaScript (ES2022)
 - Type declarations (.d.ts)
 - Source maps
@@ -418,8 +423,8 @@ The build outputs to the `dist/` directory with:
 TypeScript path aliases are configured:
 
 ```typescript
-import { logger } from '@/lib/logger';      // src/lib/logger.ts
-import { MyTest } from '@tests/helpers';    // tests/helpers.ts
+import { logger } from '@/lib/logger'; // src/lib/logger.ts
+import { MyTest } from '@tests/helpers'; // tests/helpers.ts
 ```
 
 ## 📚 Documentation
@@ -437,6 +442,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 ### Path Alias Resolution Issues
 
 **Issue: Import using `@/` path alias fails with "Cannot find module"**
+
 - **Cause:** TypeScript path aliases not configured for runtime or tooling
 - **Solution:**
   1. Verify `tsconfig.json` has paths configured:
@@ -452,6 +458,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 - **Verify:** Run `npm run typecheck` to validate TypeScript configuration
 
 **Issue: Path alias works in IDE but fails in tests**
+
 - **Cause:** Test runner doesn't recognize TypeScript paths
 - **Solution:**
   1. Check `vitest.config.ts` has `resolve.alias` configured
@@ -462,6 +469,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 ### DCYFR AI Configuration Errors
 
 **Issue: `.dcyfr.yaml` not loading or validation fails**
+
 - **Cause:** Invalid YAML syntax or missing required fields
 - **Solution:**
   1. Validate YAML syntax: `npx @dcyfr/ai config:validate`
@@ -476,6 +484,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 - **Debug:** Run with verbose flag: `npx @dcyfr/ai config:validate --verbose`
 
 **Issue: Environment variables not overriding config**
+
 - **Cause:** Incorrect variable naming or not loaded before app starts
 - **Solution:**
   1. Use correct format: `DCYFR_SECTION_KEY` (e.g., `DCYFR_TELEMETRY_ENABLED=false`)
@@ -486,6 +495,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 ### Build and Production Deployment Issues
 
 **Issue: Build fails with TypeScript errors**
+
 - **Cause:** Strict mode catches type errors not visible in development
 - **Solution:**
   1. Run `npm run typecheck` to see all errors
@@ -495,6 +505,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 - **Best practice:** Run typecheck in pre-commit hook to catch errors early
 
 **Issue: Production server crashes with "Cannot find module"**
+
 - **Cause:** Missing dependencies or incorrect import paths after build
 - **Solution:**
   1. Verify all dependencies in `package.json` (not devDependencies)
@@ -504,6 +515,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 - **Common mistake:** Importing from `devDependencies` in production code
 
 **Issue: Performance degradation in production**
+
 - **Cause:** Development tools still enabled or logging too verbose
 - **Solution:**
   1. Set `NODE_ENV=production` environment variable
@@ -515,6 +527,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 ### Server and API Issues
 
 **Issue: Server fails to start on specified port**
+
 - **Cause:** Port already in use or insufficient permissions
 - **Solution:**
   1. Check if port in use: `lsof -i :3000` (or `netstat -ano | findstr :3000` on Windows)
@@ -524,6 +537,7 @@ import { MyTest } from '@tests/helpers';    // tests/helpers.ts
 - **Best practice:** Use `PORT` environment variable for deployment flexibility
 
 **Issue: API endpoints return 404 in production**
+
 - **Cause:** Routes not properly registered or build output issue
 - **Solution:**
   1. Verify route registration in `src/server.ts`
@@ -549,6 +563,7 @@ npm run changeset
 ```
 
 This will prompt you to:
+
 1. Select the type of change (patch, minor, major)
 2. Provide a brief summary
 
@@ -573,10 +588,12 @@ Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for 
 **License:** MIT for personal/non-commercial use. Commercial use requires a paid tier.
 
 This template is dual-licensed:
+
 - **MIT License** for personal, educational, and non-commercial use (free)
 - **Commercial License** for business and revenue-generating use (paid tiers)
 
 **Sponsorship Tiers:**
+
 - 🌍 **Community** ($5/mo) - Signal community access (DCYFR.NET, Quantum Flux)
 - 💚 **Sponsors** ($10/mo) - Bio on website + private channels
 - 👨‍💻 **Developer** ($20/mo) - Limited commercial license + pre-release + portfolio support
