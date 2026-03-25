@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24.13.0'
-          cache: 'npm'
-      - run: npm ci
+          cache: ''
+      - run: npm install
       - run: npm run lint
 
   typecheck:
@@ -33,8 +33,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24.13.0'
-          cache: 'npm'
-      - run: npm ci
+          cache: ''
+      - run: npm install
       - run: npm run type-check
 
   test:
@@ -50,8 +50,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
+          cache: ''
+      - run: npm install
       - run: npm run test
 
   build:
@@ -64,8 +64,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24.13.0'
-          cache: 'npm'
-      - run: npm ci
+          cache: ''
+      - run: npm install
       - run: npm run build
       - uses: actions/upload-artifact@v7
         with:
