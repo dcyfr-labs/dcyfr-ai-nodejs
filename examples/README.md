@@ -1,25 +1,46 @@
-# Examples
+# @dcyfr/ai-nodejs Examples
 
-This directory contains runnable examples for `@dcyfr/ai-nodejs` template usage.
+This directory contains runnable examples for the `@dcyfr/ai-nodejs` Node.js/TypeScript starter template.
 
-## Files
+## Example Index
 
-- `basic-usage.ts` — Core framework usage flow.
-- `plugin-system.ts` — Plugin lifecycle and registration patterns.
-- `telemetry.ts` — Telemetry initialization and logging patterns.
+| File               | Demonstrates                                              |
+| ------------------ | --------------------------------------------------------- |
+| `basic-usage.ts`   | TelemetryEngine and ValidationFramework core usage        |
+| `plugin-system.ts` | Plugin lifecycle, registration, and validation patterns   |
+| `telemetry.ts`     | Advanced telemetry initialization and structured logging  |
 
 ## Prerequisites
 
+- Node.js >= 20
 - Install dependencies: `npm install`
 
-## Run examples
+## Run Examples
 
-From package root:
+From the package root:
 
-- `npx tsx examples/basic-usage.ts`
-- `npx tsx examples/plugin-system.ts`
-- `npx tsx examples/telemetry.ts`
+```bash
+npx tsx examples/basic-usage.ts
+npx tsx examples/plugin-system.ts
+npx tsx examples/telemetry.ts
+```
 
-## Type-check examples
+## Compile Check (CI)
 
-- `npx tsc --noEmit --module nodenext --moduleResolution nodenext --target es2022 --strict --esModuleInterop true --skipLibCheck true examples/plugin-system.ts examples/telemetry.ts`
+All examples are validated by the TypeScript compiler:
+
+```bash
+npm run examples:compile
+```
+
+This compiles all example files with `moduleResolution: nodenext` (matching the package's ESM runtime). It is enforced in the `validate-examples` CI workflow on every PR.
+
+## Expected Output Markers
+
+Each example uses `// @expected-output: <text>` comments before key `console.log` calls. These serve as smoke-test anchors verifying correct execution in CI.
+
+## Authoring Notes
+
+- Use the standard JSDoc header: `@example`, `@description`, `Prerequisites:`, `Usage:`, `@license`, `@copyright`.
+- Add `// @expected-output: <text>` before any `console.log` that signals successful completion.
+- Run `npm run examples:compile` before committing example changes.

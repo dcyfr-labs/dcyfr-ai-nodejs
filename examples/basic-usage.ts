@@ -1,45 +1,54 @@
 /**
- * Example: Basic DCYFR AI usage
- * 
- * This example demonstrates the fundamentals of using DCYFR AI
- * in a Node.js application.
+ * @example BasicUsage
+ * @description Fundamentals of using @dcyfr/ai in a Node.js application.
+ *
+ * Demonstrates:
+ * - TelemetryEngine initialization with in-memory storage
+ * - ValidationFramework setup with gate configuration
+ *
+ * Prerequisites:
+ * - Node.js >= 20
+ * - @dcyfr/ai installed
+ *
+ * Usage:
+ *   npx tsx examples/basic-usage.ts
+ *
+ * @license MIT
+ * @copyright DCYFR Labs (https://www.dcyfr.ai)
  */
 
 import { ValidationFramework, TelemetryEngine } from '@dcyfr/ai';
-import type { FrameworkConfig } from '@dcyfr/ai';
 
 async function basicExample() {
   console.log('🚀 DCYFR AI Basic Example\n');
 
-  // 1. Initialize telemetry
-  const telemetry = new TelemetryEngine({
-    enabled: true,
-    storage: 'memory'
-  });
+  // 1. Initialize telemetry (in-memory storage)
+  const telemetry = new TelemetryEngine({ storage: 'memory' });
   console.log('✅ Telemetry initialized\n');
 
-  // 2. Initialize validation framework
-  const validation = new ValidationFramework({
-    enabled: true,
-    gates: [],
-    reporters: ['console']
-  });
+  // 2. Initialize validation framework (no gates = pass-through)
+  const validation = new ValidationFramework({ gates: [], failureMode: 'warn' });
   console.log('✅ Validation framework initialized\n');
 
-  // 3. Run validation
-  const result = await validation.runGates([]);
-  
-  if (result.passed) {
+  // 3. Run validation with a minimal context
+  const result = await validation.validate({
+    projectRoot: process.cwd(),
+    files: [],
+    config: {},
+  });
+
+  if (result.summary.totalViolations === 0) {
     console.log('✅ Validation passed');
-    console.log('Violations:', result.violations.length);
+    console.log('Gates run:', result.summary.totalGates);
   } else {
-    console.log('❌ Validation failed');
-    console.log('Violations:', result.violations);
+    console.log('❌ Validation found violations');
+    console.log('Violations:', result.summary.totalViolations);
   }
 
-  // 4. Cleanup
-  await telemetry.shutdown?.();
-  console.log('\n✅ Framework shutdown complete');
+  // 4. Telemetry engine does not require explicit shutdown
+  void telemetry;
+  // @expected-output: ✅ Example complete
+  console.log('\n✅ Example complete');
 }
 
 // Run the example
