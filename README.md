@@ -1,5 +1,13 @@
 # DCYFR AI Node.js & TypeScript Starter Template
 
+<!-- README-META
+  tlp_clearance: GREEN
+  status: active
+  name: dcyfr-ai-nodejs
+  description: DCYFR AI-powered Node.js & TypeScript starter template
+  last_validated: 2026-03-29
+-->
+
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr/dcyfr-ai-nodejs)
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D24.13.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
