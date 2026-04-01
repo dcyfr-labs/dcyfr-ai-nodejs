@@ -25,6 +25,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./dist/.tsbuildinfo",
     "outDir": "./dist",
+    "rootDir": "./src",
     "removeComments": false,
     "importHelpers": false,
     "downlevelIteration": true,
@@ -37,6 +38,9 @@
 
     /* Completeness */
     "skipLibCheck": true,
+
+    "ignoreDeprecations": "6.0",
+    "types": ["node"],
 
     /* Path Mapping */
     "baseUrl": ".",
