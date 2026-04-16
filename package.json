@@ -78,10 +78,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dcyfr/dcyfr-ai-nodejs"
+    "url": "https://github.com/dcyfr-labs/dcyfr-ai-nodejs"
   },
   "bugs": {
-    "url": "https://github.com/dcyfr/dcyfr-ai-nodejs/issues"
+    "url": "https://github.com/dcyfr-labs/dcyfr-ai-nodejs/issues"
   },
-  "homepage": "https://github.com/dcyfr/dcyfr-ai-nodejs#readme"
+  "homepage": "https://github.com/dcyfr-labs/dcyfr-ai-nodejs#readme"
 }
