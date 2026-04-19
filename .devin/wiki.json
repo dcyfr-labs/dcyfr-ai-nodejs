@@ -1,0 +1,8 @@
+{
+  "repo_notes": [
+    {
+      "content": "Node.js/TypeScript starter template for DCYFR AI projects. Document the project structure, setup process, configuration patterns, and best practices for bootstrapping new AI-enabled Node.js applications using the DCYFR framework.",
+      "author": "DCYFR Engineering"
+    }
+  ]
+}

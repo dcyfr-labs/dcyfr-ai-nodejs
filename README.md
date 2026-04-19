@@ -586,14 +586,16 @@ This will prompt you to:
 
 The changeset will be committed with your code changes. When merged to `main`, an automated "Version Packages" PR will be created.
 
-### Installing Specific Versions
+### Pinning a Specific Version
+
+This is a starter template (`private: true`) — not published to npm. To start from a tagged version, clone or degit with a tag:
 
 ```bash
-# Latest version
-npm install @dcyfr/ai-nodejs-starter
+# Clone a specific release tag
+npx degit dcyfr/dcyfr-ai-nodejs#v1.2.3 my-project
 
-# Specific version
-npm install @dcyfr/ai-nodejs-starter@1.2.3
+# Or via git
+git clone --branch v1.2.3 https://github.com/dcyfr/dcyfr-ai-nodejs.git my-project
 ```
 
 ## 🤝 Contributing
