@@ -7,6 +7,9 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+  NPM_CONFIG_PROVENANCE: true
+
 jobs:
   release:
     name: Release
@@ -50,6 +53,12 @@ jobs:
         # clone the template). The `ci` variant requires a tracked lockfile.
         run: npm install
 
+      - name: Upgrade npm for Trusted Publishing
+        # npm 11.5+ is required for OIDC Trusted Publishing. The runner's
+        # bundled npm already meets this; pinning to latest guards against
+        # version drift in future runner images.
+        run: npm install -g npm@latest
+
       - name: Build
         run: npm run build
 
@@ -63,13 +72,4 @@ jobs:
           title: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: $NPM_TOKEN
-          NPM_TOKEN: $NPM_TOKEN
-      - name: Load secrets from 1Password
-        uses: 1password/load-secrets-action@v4
-        with:
-          export-env: true
-        env:
-          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          NPM_TOKEN: op://CI-CD/dcyfr-ai-nodejs-npm-token/credential
 
