@@ -19,6 +19,7 @@ Thumbs.db
 .env.local
 .env.*.local
 config.json
+!.changeset/config.json
 **/.archive/**
 **/.private/**
 
