@@ -32,7 +32,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
-        run: npm ci
+        # `npm install` (not `npm ci`) — package-lock.json is intentionally
+        # gitignored (template pattern; users get a fresh lockfile when they
+        # clone the template). The `ci` variant requires a tracked lockfile.
+        run: npm install
 
       - name: Build
         run: npm run build
