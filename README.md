@@ -5,11 +5,13 @@
   status: active
   name: dcyfr-ai-nodejs
   description: DCYFR AI-powered Node.js & TypeScript starter template
-  last_validated: 2026-03-29
+  last_validated: 2026-07-11
 -->
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr/dcyfr-ai-nodejs)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/dcyfr-labs/dcyfr-ai-nodejs)
 
+[![CI](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/actions/workflows/ci.yml/badge.svg)](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/actions/workflows/codeql.yml/badge.svg)](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/actions/workflows/codeql.yml)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D24.13.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](./LICENSE)
@@ -21,7 +23,7 @@ This template provides a solid foundation for building modern web applications w
 
 > **📦 Starter Template** — This is a **starter template** for cloning, not an npm package. Use `git clone` or download the source to create your own Node.js application. This package is marked `private: true` and is not published to npm.
 
-> **🛠️ CLI Functionality** — CLI features are provided by the separate [`@dcyfr/ai-cli`](https://github.com/dcyfr/dcyfr-ai-cli) package. Install it via `npm install @dcyfr/ai-cli` or globally with `npm install -g @dcyfr/ai-cli`. See [MIGRATION.md](./MIGRATION.md) for details on the CLI extraction.
+> **🛠️ CLI Functionality** — CLI features are provided by the separate [`@dcyfr/ai-cli`](https://github.com/dcyfr-labs/dcyfr-ai-cli) package. Install it via `npm install @dcyfr/ai-cli` or globally with `npm install -g @dcyfr/ai-cli`. See [MIGRATION.md](./MIGRATION.md) for details on the CLI extraction.
 
 ## About DCYFR
 
@@ -29,7 +31,6 @@ This template provides a solid foundation for building modern web applications w
 
 - **DCYFR** is a registered trademark of DCYFR Labs.
 - Primary domain: [www.dcyfr.ai](https://www.dcyfr.ai)
-- Trademark guidance: [../TRADEMARK.md](../TRADEMARK.md)
 - Licensing details: [LICENSE](./LICENSE)
 
 ## Table of Contents
@@ -53,6 +54,7 @@ This template provides a solid foundation for building modern web applications w
   - [DCYFR AI Configuration](#dcyfr-ai-configuration)
   - [Application Configuration](#application-configuration)
 - [Testing](#-testing)
+- [Continuous Integration](#-continuous-integration)
 - [Building for Production](#-building-for-production)
 - [Customization](#-customization)
 - [Troubleshooting](#-troubleshooting)
@@ -66,8 +68,8 @@ This template provides a solid foundation for building modern web applications w
 
 - 🌐 **Express Web Server** - Production-ready HTTP server with middleware
 - 🤖 **DCYFR AI Integration** - Built-in AI framework with plugins, validation, and telemetry
-- �️ **CLI Tooling** - Integrated with [`@dcyfr/ai-cli`](https://github.com/dcyfr/dcyfr-ai-cli) for command-line operations
-- �📘 **TypeScript Strict Mode** - Full type safety with strict compiler options
+- 🛠️ **CLI Tooling** - Integrated with [`@dcyfr/ai-cli`](https://github.com/dcyfr-labs/dcyfr-ai-cli) for command-line operations
+- 📘 **TypeScript Strict Mode** - Full type safety with strict compiler options
 - ⚡ **Modern Node.js** - ESM modules, Node.js 24+, latest features
 - 🧪 **Vitest Testing** - Fast unit testing with coverage reporting
 - 🔧 **Developer Experience** - Hot reload, source maps, path aliases
@@ -84,10 +86,10 @@ This template provides a solid foundation for building modern web applications w
 
 ```bash
 # Method 1: Using degit (fastest)
-npx degit dcyfr/dcyfr-ai-nodejs my-project
+npx degit dcyfr-labs/dcyfr-ai-nodejs my-project
 
 # Method 2: Clone repository
-git clone https://github.com/dcyfr/dcyfr-ai-nodejs.git my-project
+git clone https://github.com/dcyfr-labs/dcyfr-ai-nodejs.git my-project
 
 # Install and run
 cd my-project
@@ -109,19 +111,17 @@ npm run dev
 
 ## 🧭 Related Packages
 
-| Package                                | Purpose                   | Type        |
-| -------------------------------------- | ------------------------- | ----------- |
-| [@dcyfr/ai](../dcyfr-ai)               | Core AI framework         | npm package |
-| [@dcyfr/ai-cli](../dcyfr-ai-cli)       | CLI tools                 | npm package |
-| [@dcyfr/ai-agents](../dcyfr-ai-agents) | Autonomous agent template | Template    |
-| [@dcyfr/ai-api](../dcyfr-ai-api)       | REST API template         | Template    |
-| [dcyfr-labs](../dcyfr-labs)            | Production Next.js app    | Application |
+| Package                                                                 | Purpose                   | Type        |
+| ----------------------------------------------------------------------- | ------------------------- | ----------- |
+| [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai)                     | Core AI framework         | npm package |
+| [@dcyfr/ai-cli](https://github.com/dcyfr-labs/dcyfr-ai-cli)             | CLI tools                 | npm package |
+| [@dcyfr/ai-agents](https://github.com/dcyfr-labs/dcyfr-ai-agents)       | Autonomous agent template | Template    |
+| [@dcyfr/ai-api](https://github.com/dcyfr-labs/dcyfr-ai-api)             | REST API template         | Template    |
+| [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs)                  | Production Next.js app    | Application |
 
 **See also:**
 
-- [Workspace Documentation](../README.md)
-- [Architecture Guide](../docs/architecture/)
-- [Contributing Guide](../CONTRIBUTING.md)
+- [Contributing Guide](./CONTRIBUTING.md)
 
 ---
 
@@ -150,16 +150,22 @@ npm run dev
 
 ```bash
 # Web Server
-npm run serve           # Start development web server
-npm start               # Start production web server
+npm run serve           # Start development web server (tsx src/server.ts)
+npm run serve:prod      # Start built web server (node dist/server.js)
+npm start               # Start built entry point (node dist/index.js)
 
 # Development
-npm run dev             # Run in watch mode
-npm run build           # Build for production
+npm run dev             # Run entry point in watch mode
+npm run build           # Build for production (tsc)
 npm test                # Run tests
+npm run test:watch      # Run tests in watch mode
 npm run test:coverage   # Run tests with coverage
-npm run type-check      # Type check only
-npm run lint            # Lint code
+npm run typecheck       # Type check only (alias: type-check)
+npm run lint            # Lint code (lint:fix to auto-fix)
+npm run format          # Prettier over src/
+npm run examples:check  # Type-check the examples/ scripts
+npm run cli             # DCYFR CLI (via @dcyfr/ai-cli)
+npm run clean           # Remove dist/
 ```
 
 ## 📁 Project Structure
@@ -175,6 +181,7 @@ dcyfr-ai-nodejs/
 │   └── types/
 │       └── index.ts          # TypeScript type definitions
 ├── examples/
+│   ├── README.md             # How to run/type-check the examples
 │   ├── basic-usage.ts        # Basic framework usage
 │   ├── plugin-system.ts      # Custom plugin examples
 │   └── telemetry.ts          # Advanced telemetry
@@ -182,7 +189,15 @@ dcyfr-ai-nodejs/
 │   └── unit/
 │       ├── logger.test.ts    # Logger tests
 │       └── config.test.ts    # Config tests
+├── docs/                     # Getting-started + integration notes
+├── .github/workflows/        # CI, CodeQL, Semgrep, SonarCloud, release
+├── AGENTS.md                 # Agent conventions for this repo
+├── MIGRATION.md              # CLI extraction migration notes
+├── CONTRIBUTING.md           # Contribution guidelines
 ├── .dcyfr.yaml               # DCYFR AI configuration
+├── eslint.config.mjs         # ESLint configuration
+├── prettier.config.mjs       # Prettier configuration
+├── sonar-project.properties  # SonarCloud configuration
 ├── tsconfig.json             # TypeScript configuration
 ├── vitest.config.ts          # Test configuration
 └── package.json              # Project metadata
@@ -346,21 +361,31 @@ logger.error('Operation failed', {
 
 ### DCYFR AI Configuration (`.dcyfr.yaml`)
 
+Abridged from the shipped [.dcyfr.yaml](./.dcyfr.yaml):
+
 ```yaml
-version: '1.0'
+version: "1.0"
+
 project:
-  name: my-project
-  type: application
+  name: dcyfr-ai-nodejs
+  type: starter-template
+  framework: nodejs
 
 features:
   telemetry: true
   validation: true
   plugins: true
+  providers: true
 
 validation:
   rules:
     require-esm: error
     require-strict-types: error
+    prefer-modern-syntax: warn
+
+telemetry:
+  enabled: true
+  level: basic
 ```
 
 ### Application Configuration
@@ -399,7 +424,20 @@ npm run test:watch
 npm run test:coverage
 ```
 
-Coverage thresholds are configured at 80% for lines, functions, and statements.
+Coverage thresholds are configured at 80% for lines, functions, and statements, and 75% for branches (see [vitest.config.ts](./vitest.config.ts)).
+
+## 🔁 Continuous Integration
+
+Six GitHub Actions workflows run on this repository:
+
+| Workflow | Purpose |
+| --- | --- |
+| `ci.yml` | Lint, type-check, test, build on every PR |
+| `codeql.yml` | CodeQL security analysis |
+| `semgrep.yml` | Semgrep static analysis |
+| `sonarcloud.yml` | SonarCloud quality scan |
+| `release.yml` | Changesets release automation |
+| `dependabot-auto-merge.yml` | Auto-merge for passing Dependabot PRs |
 
 ## 📦 Building for Production
 
@@ -448,7 +486,8 @@ import { MyTest } from '@tests/helpers'; // tests/helpers.ts
 
 - **Getting Started**: [GETTING_STARTED.md](./docs/GETTING_STARTED.md)
 - **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md)
-- **DCYFR AI Docs**: [@dcyfr/ai documentation](../dcyfr-ai/README.md)
+- **Migration (CLI extraction)**: [MIGRATION.md](./MIGRATION.md)
+- **DCYFR AI Docs**: [@dcyfr/ai documentation](https://github.com/dcyfr-labs/dcyfr-ai)
 
 [⬆️ Back to top](#dcyfr-ai-nodejs--typescript-starter-template)
 
@@ -489,25 +528,24 @@ import { MyTest } from '@tests/helpers'; // tests/helpers.ts
 
 - **Cause:** Invalid YAML syntax or missing required fields
 - **Solution:**
-  1. Validate YAML syntax: `npx @dcyfr/ai config:validate`
-  2. Check required fields: `version`, `projectName` must be present
+  1. Validate the config: `npx dcyfr config validate` (the `dcyfr` bin ships with `@dcyfr/ai-cli`, already a dependency; also available as `npm run cli -- config validate`)
+  2. Check required fields: `version` and `project.name` must be present
   3. Verify indentation (use spaces, not tabs)
   4. Check quotes around string values with special characters
 - **Example minimal config:**
   ```yaml
-  version: '1.0.0'
-  projectName: my-app
+  version: "1.0"
+  project:
+    name: my-app
   ```
-- **Debug:** Run with verbose flag: `npx @dcyfr/ai config:validate --verbose`
 
-**Issue: Environment variables not overriding config**
+**Issue: Application config not applied**
 
-- **Cause:** Incorrect variable naming or not loaded before app starts
+- **Cause:** `config.json` missing or malformed — the loader (`src/lib/config.ts`) falls back to defaults silently
 - **Solution:**
-  1. Use correct format: `DCYFR_SECTION_KEY` (e.g., `DCYFR_TELEMETRY_ENABLED=false`)
-  2. Load env vars before importing DCYFR: `import 'dotenv/config'` at top of entry
-  3. Verify precedence: env vars > `.dcyfr.yaml` > framework defaults
-- **Verify:** Log config to see final merged values: `console.log(await loadConfig())`
+  1. Place `config.json` in the project root (see [Application Configuration](#application-configuration))
+  2. The only environment variables the template itself reads are `PORT` (`src/index.ts`) and `NODE_ENV` (`src/server.ts`)
+- **Verify:** Log the final merged values: `console.log(await loadConfig())`
 
 ### Build and Production Deployment Issues
 
@@ -536,8 +574,8 @@ import { MyTest } from '@tests/helpers'; // tests/helpers.ts
 - **Cause:** Development tools still enabled or logging too verbose
 - **Solution:**
   1. Set `NODE_ENV=production` environment variable
-  2. Reduce log level: `LOG_LEVEL=info` (not `debug`)
-  3. Disable telemetry if not needed: `DCYFR_TELEMETRY_ENABLED=false`
+  2. Reduce log level via `config.json` (`telemetry.level`) — see `src/lib/config.ts`
+  3. Disable telemetry if not needed: `"telemetry": { "enabled": false }` in `config.json`
   4. Enable compression: Add `compression` middleware to Express
 - **Monitor:** Use `console.time()` to identify slow operations
 
@@ -592,10 +630,10 @@ This is a starter template (`private: true`) — not published to npm. To start 
 
 ```bash
 # Clone a specific release tag
-npx degit dcyfr/dcyfr-ai-nodejs#v1.2.3 my-project
+npx degit dcyfr-labs/dcyfr-ai-nodejs#v1.2.3 my-project
 
 # Or via git
-git clone --branch v1.2.3 https://github.com/dcyfr/dcyfr-ai-nodejs.git my-project
+git clone --branch v1.2.3 https://github.com/dcyfr-labs/dcyfr-ai-nodejs.git my-project
 ```
 
 ## 🤝 Contributing
@@ -619,21 +657,21 @@ This template is dual-licensed:
 - 🚀 **Founder** ($2,400/yr) - Full commercial license + 1hr consultation/mo
 - 🏢 **Enterprise** ($9,600/yr) - Enterprise license + premium support
 
-**Learn more:** [SPONSORS.md](../SPONSORS.md) | **Contact:** licensing@dcyfr.ai
-**Trademark:** "DCYFR" is a trademark of DCYFR Labs. See [TRADEMARK.md](../TRADEMARK.md)
+**Learn more:** [GitHub Sponsors](https://github.com/sponsors/dcyfr) | **Contact:** licensing@dcyfr.ai
+**Trademark:** "DCYFR" is a trademark of DCYFR Labs.
 
 ## 🔗 Related Projects
 
-- [@dcyfr/ai](../dcyfr-ai) - Core DCYFR AI framework
-- [@dcyfr/agents](../dcyfr-ai-agents/) - DCYFR validation agents
-- [dcyfr-labs](../dcyfr-labs) - Reference implementation
+- [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai) - Core DCYFR AI framework
+- [@dcyfr/workspace-agents](https://github.com/dcyfr-labs/dcyfr-workspace-agents) - DCYFR validation agents
+- [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs) - Reference implementation
 
 ## 💬 Support
 
-- **Issues**: [GitHub Issues](https://github.com/dcyfr/dcyfr-ai-nodejs/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/dcyfr/dcyfr-ai-nodejs/discussions)
-- **Documentation**: [DCYFR AI Docs](https://github.com/dcyfr/dcyfr-ai)
+- **Issues**: [GitHub Issues](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/discussions)
+- **Documentation**: [DCYFR AI Docs](https://github.com/dcyfr-labs/dcyfr-ai)
 
 ---
 
-**Built with ❤️ by DCYFR** | [Website](https://dcyfr.ai) | [GitHub](https://github.com/dcyfr)
+**Built with ❤️ by DCYFR** | [Website](https://dcyfr.ai) | [GitHub](https://github.com/dcyfr-labs)
