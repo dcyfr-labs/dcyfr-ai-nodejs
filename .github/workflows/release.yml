@@ -55,9 +55,16 @@ jobs:
 
       - name: Upgrade npm for Trusted Publishing
         # npm 11.5+ is required for OIDC Trusted Publishing. The runner's
-        # bundled npm already meets this; pinning to latest guards against
-        # version drift in future runner images.
-        run: npm install -g npm@latest
+        # bundled npm already meets this; pinning guards against version drift
+        # in future runner images.
+        #
+        # Bounded to 11.x on purpose: npm 12 requires node
+        # `^22.22.2 || ^24.15.0 || >=26.0.0`, and the node pin above (24.13.0)
+        # sits just under the 24.x floor — so `npm@latest` aborts with
+        # EBADENGINE and fails the release outright. `^11` keeps the >=11.5
+        # OIDC floor this step exists for while staying under that ceiling.
+        # Widen once the node pin moves to >=24.15.0.
+        run: npm install -g npm@^11
 
       - name: Build
         run: npm run build
