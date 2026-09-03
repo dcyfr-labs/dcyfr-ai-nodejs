@@ -1,8 +1,37 @@
 {
   "repo_notes": [
     {
-      "content": "Node.js/TypeScript starter template for DCYFR AI projects. Document the project structure, setup process, configuration patterns, and best practices for bootstrapping new AI-enabled Node.js applications using the DCYFR framework.",
-      "author": "DCYFR Engineering"
+      "content": "The smallest repo in the family (43 files). Its docs/ directory carries more weight than its src/: GETTING_STARTED, INTEGRATION_NOTES and PROOF_OF_CONCEPT are the real content.",
+      "author": "rei-doc-specialist"
+    },
+    {
+      "content": "The CLI that once lived here was extracted into dcyfr-ai-cli; do not document it as if it were still part of this template.",
+      "author": "rei-doc-specialist"
+    }
+  ],
+  "pages": [
+    {
+      "title": "Template Overview",
+      "purpose": "What this starter provides, the toolchain it pins, and the project layout a clone begins with."
+    },
+    {
+      "title": "Getting Started",
+      "purpose": "Cloning, installing, running and building, following docs/GETTING_STARTED.md.",
+      "parent": "Template Overview"
+    },
+    {
+      "title": "Server and Plugins",
+      "purpose": "The server entrypoint under src/server.ts, the plugin pattern the template demonstrates, and the shared utilities under src/lib/.",
+      "parent": "Template Overview"
+    },
+    {
+      "title": "Telemetry",
+      "purpose": "The telemetry example and what the template expects an application to instrument.",
+      "parent": "Template Overview"
+    },
+    {
+      "title": "Integration Notes",
+      "purpose": "How this template is meant to sit alongside the rest of the DCYFR AI family, from docs/INTEGRATION_NOTES.md and docs/PROOF_OF_CONCEPT.md."
     }
   ]
 }
