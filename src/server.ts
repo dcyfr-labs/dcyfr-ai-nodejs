@@ -425,5 +425,14 @@ export async function startServer(port: number = 3000): Promise<void> {
 
 // Run server if executed directly
 if (import.meta.url === `file://${process.argv[1]}`) {
-  startServer();
+  startServer().catch((error: unknown) => {
+    logger.error('Server failed to start', {
+      error: error instanceof Error ? {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      } : error
+    });
+    process.exit(1);
+  });
 }
