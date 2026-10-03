@@ -36,8 +36,8 @@ async function main(): Promise<void> {
   }
 }
 
-// Run the application
-main();
+// Run the application (main() handles its own errors and exits non-zero)
+void main();
 
 // Export for testing
 export { main };
