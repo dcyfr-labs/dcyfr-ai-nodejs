@@ -15,7 +15,7 @@ By contributing to this template, you agree that:
 
 ### Trademark
 
-"DCYFR" is a trademark of DCYFR Labs. See [TRADEMARK.md](../TRADEMARK.md) for usage guidelines.
+"DCYFR" is a trademark of Drew Gowan. See [TRADEMARK.md](../TRADEMARK.md) for usage guidelines.
 
 ### Commercial Contributors
 

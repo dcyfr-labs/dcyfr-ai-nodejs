@@ -29,7 +29,7 @@ This template provides a solid foundation for building modern web applications w
 
 `@dcyfr/ai-nodejs-starter` is maintained by **DCYFR Labs** as part of the DCYFR starter template portfolio.
 
-- **DCYFR** is a trademark of DCYFR Labs.
+- **DCYFR** is a trademark of Drew Gowan.
 - Primary domain: [www.dcyfr.ai](https://www.dcyfr.ai)
 - Licensing details: [LICENSE](./LICENSE)
 
@@ -658,7 +658,7 @@ This template is dual-licensed:
 - 🏢 **Enterprise** ($9,600/yr) - Enterprise license + premium support
 
 **Learn more:** [GitHub Sponsors](https://github.com/sponsors/dcyfr) | **Contact:** licensing@dcyfr.ai
-**Trademark:** "DCYFR" is a trademark of DCYFR Labs.
+**Trademark:** "DCYFR" is a trademark of Drew Gowan.
 
 ## 🔗 Related Projects
 
