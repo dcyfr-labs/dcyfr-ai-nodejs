@@ -122,7 +122,7 @@ export class MyCustomAgent extends BaseAgent {
 
 ```bash
 # Clone the template
-git clone https://github.com/dcyfr/dcyfr-ai-nodejs-starter.git my-app
+git clone https://github.com/dcyfr-labs/dcyfr-ai-nodejs.git my-app
 cd my-app
 
 # Install dependencies
@@ -403,7 +403,7 @@ See [examples/](examples/) directory for:
 
 ## 🔗 Related Resources
 
-- [@dcyfr/ai Documentation](https://github.com/dcyfr/dcyfr-ai)
+- [@dcyfr/ai Documentation](https://github.com/dcyfr-labs/dcyfr-ai)
 - [Proof of Concept](PROOF_OF_CONCEPT.md)
 - [Integration Notes](INTEGRATION_NOTES.md)
 - [Getting Started Guide](GETTING_STARTED.md)

@@ -311,4 +311,4 @@ This proof of concept successfully demonstrates:
 **Status:** ✅ Proof of Concept Complete  
 **Version:** 1.0.0  
 **Last Updated:** January 27, 2026  
-**Repository:** https://github.com/dcyfr/dcyfr-ai-nodejs
+**Repository:** https://github.com/dcyfr-labs/dcyfr-ai-nodejs

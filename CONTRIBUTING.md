@@ -15,7 +15,7 @@ By contributing to this template, you agree that:
 
 ### Trademark
 
-"DCYFR" is a trademark of DCYFR Labs. See [TRADEMARK.md](../TRADEMARK.md) for usage guidelines.
+"DCYFR" is a trademark of Drew Gowan.
 
 ### Commercial Contributors
 
@@ -318,8 +318,8 @@ Before submitting a PR, ensure:
 
 ## ❓ Questions?
 
-- **General Questions**: [GitHub Discussions](https://github.com/dcyfr/dcyfr-ai-nodejs/discussions)
-- **Bug Reports**: [GitHub Issues](https://github.com/dcyfr/dcyfr-ai-nodejs/issues)
+- **General Questions**: [GitHub Discussions](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/discussions)
+- **Bug Reports**: [GitHub Issues](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/issues)
 - **Security Issues**: Email security@dcyfr.ai (do not open public issues)
 
 ## 📜 Code of Conduct

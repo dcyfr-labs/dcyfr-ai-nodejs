@@ -19,7 +19,7 @@
 
 ```bash
 # Use this template on GitHub or clone directly
-git clone https://github.com/dcyfr/dcyfr-ai-nodejs.git my-project
+git clone https://github.com/dcyfr-labs/dcyfr-ai-nodejs.git my-project
 cd my-project
 
 # Install dependencies

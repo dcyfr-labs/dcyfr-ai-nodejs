@@ -32,7 +32,7 @@ cd YOUR_PROJECT
 ### Option B: Clone Directly
 
 ```bash
-git clone https://github.com/dcyfr/dcyfr-ai-nodejs.git my-project
+git clone https://github.com/dcyfr-labs/dcyfr-ai-nodejs.git my-project
 cd my-project
 rm -rf .git  # Remove template git history
 git init     # Start fresh
@@ -277,7 +277,7 @@ npm run test:watch
 
 - **Documentation**: Check the [README.md](./README.md)
 - **Examples**: Browse the `examples/` directory
-- **Issues**: [Open an issue](https://github.com/dcyfr/dcyfr-ai-nodejs/issues)
+- **Issues**: [Open an issue](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/issues)
 
 ---
 

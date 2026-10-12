@@ -297,7 +297,7 @@ export async function createServer(): Promise<{ app: express.Application; contex
                 <span class="badge">MIT License</span>
             </div>
             <p style="margin-top: 10px;">
-                <a href="https://github.com/dcyfr/dcyfr-ai-nodejs" target="_blank" style="color: #667eea; text-decoration: none;">
+                <a href="https://github.com/dcyfr-labs/dcyfr-ai-nodejs" target="_blank" style="color: #667eea; text-decoration: none;">
                     View on GitHub →
                 </a>
             </p>

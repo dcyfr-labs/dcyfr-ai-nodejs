@@ -93,7 +93,7 @@ npm run cli -- --help
 If you customized the CLI in your v1.x project:
 
 **Option 1: Contribute to @dcyfr/ai-cli**
-Submit a PR to add generic CLI features to the shared package: https://github.com/dcyfr/dcyfr-ai-cli
+Submit a PR to add generic CLI features to the shared package: https://github.com/dcyfr-labs/dcyfr-ai-cli
 
 **Option 2: Create Project-Specific Scripts**
 Move custom logic into npm scripts or separate utility scripts:
@@ -145,8 +145,8 @@ Yes! You can use `npx dcyfr-cli` or `npm run cli` without installing globally.
 
 ## Support
 
-- **Issues:** https://github.com/dcyfr/dcyfr-ai-cli/issues
-- **Discussions:** https://github.com/dcyfr/dcyfr-ai-cli/discussions
+- **Issues:** https://github.com/dcyfr-labs/dcyfr-ai-cli/issues
+- **Discussions:** https://github.com/dcyfr-labs/dcyfr-ai-cli/discussions
 - **Email:** hello@dcyfr.ai
 
 ## Version Compatibility
