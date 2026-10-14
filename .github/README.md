@@ -70,6 +70,6 @@ MIT License - see [LICENSE](./LICENSE) for details
 
 <div align="center">
 
-**Built with ❤️ by [DCYFR](https://github.com/dcyfr)**
+**Built with ❤️ by [DCYFR Labs](https://github.com/dcyfr-labs)**
 
 </div>
