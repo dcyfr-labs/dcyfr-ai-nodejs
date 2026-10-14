@@ -26,7 +26,6 @@ export async function createServer(): Promise<{ app: express.Application; contex
   
   // Initialize DCYFR AI framework
   const telemetry = new TelemetryEngine({
-    enabled: config.telemetry.enabled,
     storage: 'file',
     basePath: '.dcyfr/telemetry'
   });
@@ -393,7 +392,7 @@ export async function createServer(): Promise<{ app: express.Application; contex
  * Start the server
  */
 export async function startServer(port: number = 3000): Promise<void> {
-  const { app, context } = await createServer();
+  const { app } = await createServer();
   
   const server = app.listen(port, () => {
     logger.info('Server started', {
@@ -414,8 +413,7 @@ export async function startServer(port: number = 3000): Promise<void> {
     server.close(() => {
       logger.info('Server closed');
     });
-    
-    await context.telemetry.shutdown?.();
+
     process.exit(0);
   };
   
