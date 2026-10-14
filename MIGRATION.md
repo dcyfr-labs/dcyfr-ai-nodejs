@@ -80,7 +80,7 @@ dcyfr-cli status
 Just use the latest `@dcyfr/ai-nodejs-starter` template - it comes with `@dcyfr/ai-cli` preconfigured.
 
 ```bash
-npx degit dcyfr/dcyfr-ai-nodejs my-project
+npx degit dcyfr-labs/dcyfr-ai-nodejs my-project
 cd my-project
 npm install
 npm run cli -- --help

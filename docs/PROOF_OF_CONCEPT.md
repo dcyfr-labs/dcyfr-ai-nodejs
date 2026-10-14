@@ -301,10 +301,10 @@ This proof of concept successfully demonstrates:
 
 ## 🔗 Related Resources
 
-- [README.md](./README.md) - Quick start guide
+- [README.md](../README.md) - Quick start guide
 - [INTEGRATION_NOTES.md](./INTEGRATION_NOTES.md) - Framework integration details
 - [GETTING_STARTED.md](./GETTING_STARTED.md) - Step-by-step tutorial
-- [examples/](./examples/) - Code examples
+- [examples/](../examples/) - Code examples
 
 ---
 

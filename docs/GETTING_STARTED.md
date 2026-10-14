@@ -229,7 +229,7 @@ your-project/
 
 Now that you have the basics down, you can:
 
-1. **Explore the Framework**: Read the [@dcyfr/ai documentation](../dcyfr-ai/README.md)
+1. **Explore the Framework**: Read the [@dcyfr/ai documentation](https://github.com/dcyfr-labs/dcyfr-ai)
 2. **Add Features**: Build your application logic in `src/`
 3. **Write Tests**: Add tests in `tests/unit/` and `tests/integration/`
 4. **Create Plugins**: Extend functionality with custom plugins
@@ -275,7 +275,7 @@ npm run test:watch
 
 ## Getting Help
 
-- **Documentation**: Check the [README.md](./README.md)
+- **Documentation**: Check the [README.md](../README.md)
 - **Examples**: Browse the `examples/` directory
 - **Issues**: [Open an issue](https://github.com/dcyfr-labs/dcyfr-ai-nodejs/issues)
 

@@ -324,7 +324,7 @@ Before submitting a PR, ensure:
 
 ## 📜 Code of Conduct
 
-This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to conduct@dcyfr.ai.
+Participation is governed by the DCYFR Labs [Code of Conduct](https://github.com/dcyfr-labs/.github/blob/main/CODE_OF_CONDUCT.md). Report unacceptable behavior to conduct@dcyfr.ai.
 
 ## 🙏 Thank You!
 

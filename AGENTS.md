@@ -404,9 +404,9 @@ See [examples/](examples/) directory for:
 ## 🔗 Related Resources
 
 - [@dcyfr/ai Documentation](https://github.com/dcyfr-labs/dcyfr-ai)
-- [Proof of Concept](PROOF_OF_CONCEPT.md)
-- [Integration Notes](INTEGRATION_NOTES.md)
-- [Getting Started Guide](GETTING_STARTED.md)
+- [Proof of Concept](docs/PROOF_OF_CONCEPT.md)
+- [Integration Notes](docs/INTEGRATION_NOTES.md)
+- [Getting Started Guide](docs/GETTING_STARTED.md)
 
 ---
 

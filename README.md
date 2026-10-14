@@ -117,7 +117,7 @@ npm run dev
 | [@dcyfr/ai-cli](https://github.com/dcyfr-labs/dcyfr-ai-cli)             | CLI tools                 | npm package |
 | [@dcyfr/ai-agents](https://github.com/dcyfr-labs/dcyfr-ai-agents)       | Autonomous agent template | Template    |
 | [@dcyfr/ai-api](https://github.com/dcyfr-labs/dcyfr-ai-api)             | REST API template         | Template    |
-| [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs)                  | Production Next.js app    | Application |
+| [DCYFR Labs](https://www.dcyfr.ai)                                      | Production Next.js app    | Application |
 
 **See also:**
 
@@ -664,7 +664,7 @@ This template is dual-licensed:
 
 - [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai) - Core DCYFR AI framework
 - [@dcyfr/workspace-agents](https://github.com/dcyfr-labs/dcyfr-workspace-agents) - DCYFR validation agents
-- [dcyfr-labs](https://github.com/dcyfr-labs/dcyfr-labs) - Reference implementation
+- [DCYFR Labs](https://www.dcyfr.ai) - Reference implementation
 
 ## 💬 Support
 
