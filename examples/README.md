@@ -1,6 +1,6 @@
-# @dcyfr/ai-nodejs Examples
+# @dcyfr/ai-nodejs-starter Examples
 
-This directory contains runnable examples for the `@dcyfr/ai-nodejs` Node.js/TypeScript starter template.
+This directory contains runnable examples for the `@dcyfr/ai-nodejs-starter` Node.js/TypeScript starter template.
 
 ## Example Index
 

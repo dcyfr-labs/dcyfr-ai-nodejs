@@ -120,7 +120,7 @@ This template is designed to make migration easy:
 
 ## Questions?
 
-- Check the main [README.md](./README.md) for general usage
+- Check the main [README.md](../README.md) for general usage
 - See [GETTING_STARTED.md](./GETTING_STARTED.md) for setup instructions
 - Review the `.dcyfr.yaml` configuration file for AI settings
 
