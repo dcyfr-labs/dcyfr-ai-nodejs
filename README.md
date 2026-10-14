@@ -642,22 +642,10 @@ Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for 
 
 ## 📄 License & Sponsorship
 
-**License:** MIT for personal/non-commercial use. Commercial use requires a paid tier.
+**License:** MIT (see [LICENSE](./LICENSE)). Personal and commercial use are both covered; no paid license is needed.
 
-This template is dual-licensed:
+[GitHub Sponsors](https://github.com/sponsors/dcyfr) is voluntary support and does not change what the license allows.
 
-- **MIT License** for personal, educational, and non-commercial use (free)
-- **Commercial License** for business and revenue-generating use (paid tiers)
-
-**Sponsorship Tiers:**
-
-- 🌍 **Community** ($5/mo) - Signal community access (DCYFR.NET, Quantum Flux)
-- 💚 **Sponsors** ($10/mo) - Bio on website + private channels
-- 👨‍💻 **Developer** ($20/mo) - Limited commercial license + pre-release + portfolio support
-- 🚀 **Founder** ($2,400/yr) - Full commercial license + 1hr consultation/mo
-- 🏢 **Enterprise** ($9,600/yr) - Enterprise license + premium support
-
-**Learn more:** [GitHub Sponsors](https://github.com/sponsors/dcyfr) | **Contact:** licensing@dcyfr.ai
 **Trademark:** "DCYFR" is a trademark of Drew Gowan.
 
 ## 🔗 Related Projects
