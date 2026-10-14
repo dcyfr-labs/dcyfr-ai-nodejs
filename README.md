@@ -674,4 +674,4 @@ This template is dual-licensed:
 
 ---
 
-**Built with ❤️ by DCYFR** | [Website](https://dcyfr.ai) | [GitHub](https://github.com/dcyfr-labs)
+**Built with ❤️ by DCYFR Labs** | [Website](https://dcyfr.ai) | [GitHub](https://github.com/dcyfr-labs)
