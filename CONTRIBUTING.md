@@ -8,18 +8,12 @@ Thank you for your interest in contributing! This document provides guidelines f
 
 By contributing to this template, you agree that:
 
-- Your contributions will be licensed under the MIT License (personal/non-commercial)
-- Commercial use requires a paid tier (see [LICENSE](./LICENSE))
+- Your contributions are licensed under the MIT License (see [LICENSE](./LICENSE))
 - You have the right to submit the contribution under this license
-- You grant DCYFR Labs perpetual rights to use, modify, and distribute your contribution
 
 ### Trademark
 
-"DCYFR" is a trademark of Drew Gowan.
-
-### Commercial Contributors
-
-If you're contributing while working for a company using DCYFR commercially, ensure your company has the appropriate commercial license tier.
+"DCYFR" is a trademark of Drew Gowan. The MIT License covers the code, not the name.
 
 **Questions?** [licensing@dcyfr.ai](mailto:licensing@dcyfr.ai)
 
