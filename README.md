@@ -651,7 +651,7 @@ Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for 
 ## 🔗 Related Projects
 
 - [@dcyfr/ai](https://github.com/dcyfr-labs/dcyfr-ai) - Core DCYFR AI framework
-- [@dcyfr/workspace-agents](https://github.com/dcyfr-labs/dcyfr-workspace-agents) - DCYFR validation agents
+- `@dcyfr/workspace-agents` - DCYFR Labs validation agents (private package, not published to npm)
 - [DCYFR Labs](https://www.dcyfr.ai) - Reference implementation
 
 ## 💬 Support
