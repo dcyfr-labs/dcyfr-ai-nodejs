@@ -485,6 +485,7 @@ import { MyTest } from '@tests/helpers'; // tests/helpers.ts
 ## 📚 Documentation
 
 - **Getting Started**: [GETTING_STARTED.md](./docs/GETTING_STARTED.md)
+- **Docs index**: [docs/README.md](./docs/README.md)
 - **Contributing**: [CONTRIBUTING.md](./CONTRIBUTING.md)
 - **Migration (CLI extraction)**: [MIGRATION.md](./MIGRATION.md)
 - **DCYFR AI Docs**: [@dcyfr/ai documentation](https://github.com/dcyfr-labs/dcyfr-ai)
