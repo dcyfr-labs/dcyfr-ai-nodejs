@@ -2,11 +2,11 @@
   "repo_notes": [
     {
       "content": "The smallest repo in the family (43 files). Its docs/ directory carries more weight than its src/: GETTING_STARTED, INTEGRATION_NOTES and PROOF_OF_CONCEPT are the real content.",
-      "author": "rei-doc-specialist"
+      "author": "dcyfr-doc-specialist"
     },
     {
       "content": "The CLI that once lived here was extracted into dcyfr-ai-cli; do not document it as if it were still part of this template.",
-      "author": "rei-doc-specialist"
+      "author": "dcyfr-doc-specialist"
     }
   ],
   "pages": [
